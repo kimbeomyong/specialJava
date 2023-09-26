@@ -5,8 +5,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
-import ch07.sec05.Student;
-
 public class HashMapStudentTest {
 	public static Scanner scan = new Scanner(System.in);
 
