@@ -2,6 +2,7 @@ package ch07.sec02;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListTest {
@@ -19,10 +20,18 @@ public class ArrayListTest {
 		}
 		printArrayAndList(strArray, strList);
 
+		// ArrayList >> Iterator 변환해서 출력하기
+		System.out.println("--------------Iterator------------------");
+		Iterator<String> iterator = strList.iterator();
+		while (iterator.hasNext()) {
+			String data = iterator.next();
+			System.out.printf("%s", data);
+		}
+
 		// 삽입(두번째 위치 삽입)
 		strArray[1] = new String("저길동");
 		strList.add(new String("저길동"));
-		System.out.println("----------------------------------------");
+		System.out.println("\n----------------------------------------");
 		printArrayAndList(strArray, strList);
 
 		// 해당되는 객체가 존재하는지 확인(저길동)
@@ -44,16 +53,16 @@ public class ArrayListTest {
 		System.out.println("----------------------------------------");
 		Object[] obj = strList.toArray();
 		for (Object data : obj) {
-			System.out.printf("%s ",data.toString());
+			System.out.printf("%s ", data.toString());
 		}
 
-		//배열을 ArrayList Arrays.asList()
+		// 배열을 ArrayList Arrays.asList()
 		System.out.println();
 		List<String> list = Arrays.asList(strArray);
-		for(String data:list) {
-			System.out.printf("%s ",(data != null)?data.toString():"");
+		for (String data : list) {
+			System.out.printf("%s ", (data != null) ? data.toString() : "");
 		}
-		
+
 		// 삭제(2번째 위치 삭제)출력하기
 		strArray[1] = null;
 		strList.remove(1);
