@@ -31,13 +31,12 @@ public class ArrayListTest {
 		}
 		
 		//정렬해서 보여주기
-		System.out.println("\n-------------------sort------------------------");
-		Collections.reverse(strList);
+		System.out.println("\n--------------------sort-----------------------");
+		Collections.sort(strList);
 		printArrayAndList(strArray, strList);
 		
-		//
 		System.out.println("\n-----------------Reverse sort---------------------");
-		Collections.sort(strList);
+		Collections.reverse(strList);
 		printArrayAndList(strArray, strList);
 		
 		// 삽입(두번째 위치 삽입)
